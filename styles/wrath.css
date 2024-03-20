@@ -1,0 +1,48 @@
+body {
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+/* Page Navigation */
+a {
+    color:aliceblue;
+}
+a:visited {
+    color:aliceblue;
+}
+
+/* Body text */
+p {
+    color: aliceblue;
+}
+
+/* Main Content */
+main {
+    text-shadow: 10px 10px 4em red;
+}
+
+h1 {
+    font-family: "burnaby-stencil", sans-serif;
+    font-size: 10em;
+    font-weight: 400;
+    padding-top: 1em;
+}
+
+span {
+    display: block;
+    background-image: url(/FireEffect.png);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fire 5s linear infinite;
+    backface-visibility: hidden;
+}
+
+
+@keyframes fire {
+    0% {
+        background-position: 0% -50%;
+    }
+    0% {
+        background-position: 100% -50%;
+    }
+}
