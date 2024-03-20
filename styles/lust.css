@@ -1,4 +1,4 @@
-nav {
+a {
   color: rgb(13, 12, 12);
 }
 a:visited {
@@ -96,4 +96,8 @@ p {
 /* Body text section */
 .text {
   margin-top: 10em;
+}
+
+p {
+  font-weight: 500;
 }

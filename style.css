@@ -15,6 +15,12 @@ main {
   width: 60%;
 }
 
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   font-size: 7em;
   line-height: 1.1;

@@ -1,9 +1,13 @@
-nav {
-    color: rgb(13, 12, 12);
-  }
-  a:visited {
-    color:rgb(13, 12, 12);
-  }
+body {
+  background-color: floralwhite;
+}
+
+a {
+  color: rgb(13, 12, 12);
+}
+a:visited {
+  color:rgb(13, 12, 12);
+}
 
 h1 {
   color: black;
@@ -11,12 +15,10 @@ h1 {
   font-weight: 900;
   font-style: normal;
 
-  height: 430px;
-  width: 600px;
+  height: 400px;
+  width: 100%;
 }
 
-.title-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+p {
+  font-weight: 500;
 }

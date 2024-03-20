@@ -1,17 +1,18 @@
 /* Main page content */
 body {
   height: 100vh;
-  background-color: #bfdfec;
-  background-repeat: repeat-x;
-  background-image: url("https://i.stack.imgur.com/b7z29.png");
-  animation: backgroud-image-scroll 10s linear;
+
 }
 main {
   height: 100%;
 }
+
 nav {
-  color: rgb(13, 12, 12);
   z-index: 5;
+}
+
+a {
+  color: rgb(13, 12, 12);
 }
 a:visited {
   color:rgb(13, 12, 12);
@@ -20,11 +21,12 @@ a:visited {
 .sloth-container {
   height: 295px;
   width: 500px;
-  margin: 15em auto 2.75em auto;
+  margin: 15em auto 2.8em auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 h1 {
   color: rgb(25, 197, 255);
   font-family: "mendl-sans-dawn", sans-serif;
@@ -67,4 +69,8 @@ svg {
   100% {
     background-position: 560px 0px;
   }
+}
+
+p {
+  font-weight: 500;
 }

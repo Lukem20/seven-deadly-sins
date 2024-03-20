@@ -1,4 +1,8 @@
-nav {
+body {
+  background-color:bisque;
+}
+
+a {
   color: rgb(13, 12, 12);
 }
 a:visited {
@@ -11,5 +15,9 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 10em;
+}
+
+p {
+  font-weight: 500;
 }
 

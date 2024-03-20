@@ -3,21 +3,6 @@ import gsap from 'gsap';
 
 // Animate "Sloth" breathing effect
 const sloth = document.querySelector('h1');
-// const tl1 = gsap.timeline({
-//     repeat: -1,
-//     repeatDelay: 1,
-// });
-// tl1.from(sloth, { 
-//     fontSize: "8em",
-//     duration: 3,
-//     ease: "power1.inOut", 
-// });
-// tl1.to(sloth, {
-//     fontSize: "4em",
-//     duration: 3,
-//     ease: "power1.inOut",
-// });
-
 
 // Animate SVG "zzz" path
 const path = document.querySelector('svg path');
