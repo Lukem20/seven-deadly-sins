@@ -5,18 +5,25 @@ body {
 }
 
 /* Page Navigation */
-a {
-  color:aliceblue;
+a{
+  text-decoration: none;
+  color: aliceblue;
+  transition: 0.2s ease;
 }
 a:visited {
-  color:aliceblue;
+  color: aliceblue;
+}
+a:hover {
+  color: lightsalmon;
+  transition: 0.2s ease;
+
 }
 
 /* Main content */
 .container {
   height: 300px;
   width: 30%;
-  margin: 15em auto 0 auto;
+  margin: 13.65em auto 0 auto;
 }
 
 span {
