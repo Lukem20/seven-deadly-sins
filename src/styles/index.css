@@ -2,8 +2,7 @@ body {
 	background: none;
 }
 
-main {
-	flex-direction: column;
+#app {
 	justify-content: center;
 }
 

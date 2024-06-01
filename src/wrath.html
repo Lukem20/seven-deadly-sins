@@ -9,8 +9,7 @@
     <title>Wrath</title>
 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styles/wrath.css">
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="https://use.typekit.net/tvc5stt.css">
   </head>
 
@@ -18,7 +17,7 @@
     <header>
       <nav class="sidebar" role="navigation">
         <ul>
-          <li id="home-button"><a href="/index.html">Home</a></li>
+          <li id="home-button"><a href="/index.html"><span aria-hidden="true" id="home-icon">T</span>Home</a></li>
           <li><a href="/envy.html">Envy</a></li>
           <li><a href="/gluttony.html">Gluttony</a></li>
           <li><a href="/greed.html">Greed</a></li>
@@ -67,7 +66,83 @@
       </section>
     </main>
 
-    <script type="module" src="../main.js"></script>
-    <script type="module" src="../scripts/wrath.js"></script>
+    <style>
+      body {
+        background-color: #000;
+        overflow-x: hidden;
+      }
+
+      /* Page Navigation */
+      a {
+        color:aliceblue;
+      }
+      a:visited {
+        color:aliceblue;
+      }
+
+      /* Body text */
+      p {
+        color: aliceblue;
+      }
+
+      /* Main Content */
+      main {
+        text-shadow: 10px 10px 4em red;
+      }
+
+      h1 {
+        font-family: "burnaby-stencil", sans-serif;
+        font-size: 10em;
+        font-weight: 400;
+        padding-top: 1em;
+      }
+
+      span {
+        display: block;
+        background-image: url(/FireEffect.png);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fire 5s linear infinite;
+        backface-visibility: hidden;
+      }
+
+
+      @keyframes fire {
+        0% {
+          background-position: 0% -50%;
+        }
+        0% {
+          background-position: 100% -50%;
+        }
+      }
+
+    </style>
+    <script type="module">
+      const shakeChars = document.querySelectorAll(".shake-text");
+
+      // Generates a random offset from -3 to 3.
+      function getRandomOffset() {
+          const num = Math.max(Math.floor(Math.random() * 4), 1);
+          return Math.random() < 0.5 ? -num : num;
+      };
+
+      let isPaused;
+      const animate = () => {
+          // If not hovering, shake the characters using the randomly generated offset.
+          if (!isPaused) {
+
+              shakeChars.forEach(char => {
+                  char.style.transform = `translate(${getRandomOffset()}px, ${getRandomOffset()}px)`;
+              });
+              requestAnimationFrame(animate);
+
+          } else {
+          // Hovering over "Wrath", remove shake animation.
+              [...shakeChars].forEach(char => char.removeAttribute("style"));
+          }
+      };
+
+      requestAnimationFrame(animate);
+    </script>
   </body>
 </html>

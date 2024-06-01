@@ -8,8 +8,7 @@
     <title>Gluttony</title>
 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/gluttony.css">
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
     <link rel="stylesheet" type="text/css" href="https://use.typekit.net/tvc5stt.css">
   </head>
 
@@ -17,6 +16,7 @@
     <header>
       <nav class="sidebar" role="navigation">
         <ul>
+          <li id="home-button"><a href="/index.html"><span aria-hidden="true" id="home-icon">T</span>Home</a></li>
           <li><a href="/envy.html">Envy</a></li>
           <li><a href="/gluttony.html">Gluttony</a></li>
           <li><a href="/greed.html">Greed</a></li>
@@ -24,7 +24,6 @@
           <li><a href="/pride.html">Pride</a></li>
           <li><a href="/sloth.html">Sloth</a></li>
           <li><a href="/wrath.html">Wrath</a></li>
-          <li id="home-button"><a href="/index.html">Home</a></li>
         </ul>
       </nav>
     </header>
@@ -56,7 +55,50 @@
       </section>
     </main>
 
-    <script type="module" src="../main.js"></script>
-    <script type="module" src="../scripts/gluttony.js"></script>
+    <!-- *** Styles *** -->
+    <style>
+      body {
+        background-color:bisque;
+      }
+
+      /* *** Navigation *** */
+      nav.sidebar ul li a {
+        color: rgb(13, 12, 12);
+      }
+      nav.sidebar ul li a:visited {
+        color: rgb(13, 12, 12);
+      }
+      nav.sidebar ul li a:hover {
+        color: rgb(121, 42, 10);
+      }
+
+      h1 {
+        color: orange;
+        font-family: "cheee-tbone", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 10em;
+      }
+      p {
+        font-weight: 500;
+      }
+
+      /* *** Responsive *** */
+
+    </style>
+
+    <!-- JavaScript -->
+    <script type="module">
+      import gsap from 'gsap';
+
+      const gluttony = document.querySelector('h1');
+      gsap.from(gluttony, {
+          fontSize: 100,
+          fontWeight: 200,
+          duration: 6,
+          ease: "power3.in"
+        });
+
+    </script>
   </body>
 </html>
