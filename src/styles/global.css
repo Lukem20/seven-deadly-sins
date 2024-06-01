@@ -1,0 +1,102 @@
+/* --- Global Styles --- */
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+
+/* 
+  *** Page navigation *** 
+*/
+header {
+  height: 50vh;
+  position: absolute;
+  top: 25%;
+}
+nav.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "hypatia-sans-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;  
+}
+nav.sidebar ul {
+  list-style: none;
+}
+nav.sidebar ul li {
+  padding: 0.5em 0;
+}
+nav.sidebar ul li a{
+  text-decoration: none;
+  color: aliceblue;
+  transition: 0.2s ease;
+}
+nav.sidebar ul li a:visited {
+  color: aliceblue;
+}
+nav.sidebar ul li a:hover {
+  color: lightsalmon;
+  transition: 0.2s ease;
+}
+#home-button {
+  padding-bottom: 2em;
+}
+
+#home-icon {
+  font-family: "mason-serif", sans-serif;
+  font-style: normal;
+  font-size: 1.5em;
+  padding-right: 0.25em;
+}
+
+/*
+  *** Main page content *** 
+*/
+#app {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+}
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 7em;
+  line-height: 1.1;
+}
+
+/*
+  *** Body text ***
+*/
+.center-text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+  column-count: 2;
+  column-width: 15em;
+  widows: 3;
+  orphans: 3;
+  gap: 4em;
+  width: min(100% - 3rem, var(--container-max, 100ch));
+  margin: 1em 0;
+  text-align: left;
+}
+.text p {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.15em;
+  letter-spacing: 0.03rem;
+  line-height: 1.7em;
+}

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Luke Moore">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Wrath</title>
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tvc5stt.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="sidebar" role="navigation">
+        <ul>
+          <li id="home-button"><a href="/index.html"><span aria-hidden="true" id="home-icon">T</span>Home</a></li>
+          <li><a href="/envy.html">Envy</a></li>
+          <li><a href="/gluttony.html">Gluttony</a></li>
+          <li><a href="/greed.html">Greed</a></li>
+          <li><a href="/lust.html">Lust</a></li>
+          <li><a href="/pride.html">Pride</a></li>
+          <li><a href="/sloth.html">Sloth</a></li>
+          <li><a href="/wrath.html">Wrath</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main role="main" id="app">
+
+      <h1 class="shake-text"><span>Wrath</span></h1>
+
+      <section class="center-text-wrapper">
+        <div data-container-style class="text">
+          <p>
+            Social media platforms have played an important role in exacerbating polarization and its consequences, including democratic erosion and political violence. 
+            Determining whether social media plays a role in worsening partisan animosity is important because political polarization has pernicious consequences. 
+            While rising levels of polarization in the U.S. predate and are not mainly caused by social media, the platforms have played an instrumental role in exacerbating the trend in recent years. 
+            Absent significant reforms by the federal government and the social media companies themselves, the platforms will continue to contribute to some of the worst consequences of polarization. 
+            These include declining trust in institutions; scorn for facts; legislative dysfunction; erosion of democratic norms; and, ultimately, real-world violence, such as the January 6 insurrection.
+          </p>
+          <p>
+            In a democratic system, politics naturally creates some degree of polarization. 
+            But in light of the harmful consequences of the extreme divisiveness now plaguing the U.S., limiting polarization ought to be an urgent priority. 
+            This kind of hatred now infects American politics, and social media has helped spread the disease. 
+            Facebook's business model is to create a society that is addicted, outraged, polarized, performative, and disinformed. 
+            The New York Times has labeled Facebook “one of the world’s most polarizing corporations,” whose “business model is optimized to keep people scrolling their Facebook feeds, amplifying divisive and inflammatory content and exaggerating political divisions in society.”
+          </p>
+          <p>
+            The most ominous aspect of partisan hatred is that it can serve as a precursor of radicalization and violence, some of which is stoked and organized online. 
+            Throughout his presidency, Donald Trump demonstrated how social media can be used to heighten racial animus and drive affective polarization. 
+            His rapid-fire posts on Twitter and Facebook sought to persuade supporters that malign forces had hijacked their country. 
+            Trump’s targets included the mainstream media, which he labeled “the enemy of the people”; an “invasion” of Latin American asylum seekers whose ranks, he said, included gang members, rapists, and other “very bad people”; a quartet of liberal congresswomen of color, whom he accused of hating America and supporting Islamic terrorism; and the Black Lives Matter movement, which he accused of “treason” and “sedition.” 
+          </p>
+          <p>
+            In the U.S., the social media industry operates in a democracy suffering the consequences of extreme political polarization. 
+            Having exacerbated this divisiveness, the major social media companies have a responsibility, therefore, to make changes that will ease partisan hatred and help begin to repair the damage they have done. 
+            This challenge is now so large and complicated that it will require the intervention of the government, as well. 
+            The very polarization to which both social media platforms and political leaders have contributed will make it difficult to achieve progress in Washington. 
+            But that’s not an excuse for inaction.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <style>
+      body {
+        background-color: #000;
+        overflow-x: hidden;
+      }
+
+      /* Page Navigation */
+      a {
+        color:aliceblue;
+      }
+      a:visited {
+        color:aliceblue;
+      }
+
+      /* Body text */
+      p {
+        color: aliceblue;
+      }
+
+      /* Main Content */
+      main {
+        text-shadow: 10px 10px 4em red;
+      }
+
+      h1 {
+        font-family: "burnaby-stencil", sans-serif;
+        font-size: 10em;
+        font-weight: 400;
+        padding-top: 1em;
+      }
+
+      span {
+        display: block;
+        background-image: url(/FireEffect.png);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fire 5s linear infinite;
+        backface-visibility: hidden;
+      }
+
+
+      @keyframes fire {
+        0% {
+          background-position: 0% -50%;
+        }
+        0% {
+          background-position: 100% -50%;
+        }
+      }
+
+    </style>
+    <script type="module">
+      const shakeChars = document.querySelectorAll(".shake-text");
+
+      // Generates a random offset from -3 to 3.
+      function getRandomOffset() {
+          const num = Math.max(Math.floor(Math.random() * 4), 1);
+          return Math.random() < 0.5 ? -num : num;
+      };
+
+      let isPaused;
+      const animate = () => {
+          // If not hovering, shake the characters using the randomly generated offset.
+          if (!isPaused) {
+
+              shakeChars.forEach(char => {
+                  char.style.transform = `translate(${getRandomOffset()}px, ${getRandomOffset()}px)`;
+              });
+              requestAnimationFrame(animate);
+
+          } else {
+          // Hovering over "Wrath", remove shake animation.
+              [...shakeChars].forEach(char => char.removeAttribute("style"));
+          }
+      };
+
+      requestAnimationFrame(animate);
+    </script>
+  </body>
+</html>
