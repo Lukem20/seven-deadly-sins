@@ -8,7 +8,7 @@
 
     <title>Sloth</title>
 
-    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/" />
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/sloth.css">
     <link rel="stylesheet" href="https://use.typekit.net/tvc5stt.css">
@@ -56,13 +56,11 @@
       </svg>
     </section>
 
-    <script type="module">
+    <!-- *** JavaScript *** -->
+    <script type="module" defer>
       import gsap from 'gsap';
-
-      // Animate "Sloth" breathing effect
       const sloth = document.querySelector('h1');
 
-      // Animate SVG "zzz" path
       const path = document.querySelector('svg path');
       const pathLength = path.getTotalLength();
       const tweenLengthMilisecPerPixel = 2.5;
