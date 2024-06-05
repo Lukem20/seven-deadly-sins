@@ -4,38 +4,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Luke Moore">
+    <meta name="description" content="A web design project for CSUMB's experiemental typograhpy class. The sin, greed, as it is represented in social media & technology.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Greed</title>
 
-    <link rel="icon" type="image/x-icon" href="7ds-logo.PNG" />
+    <link rel="icon" type="image/png" href="7ds-logo.PNG" />
     <link rel="stylesheet" type="text/css" href="styles/global.css">
     <link rel="stylesheet" href="https://use.typekit.net/tvc5stt.css">
     <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
   
     <!-- *** Styles *** -->
     <style>
-      .content-container {
-        position: absolute;
-        top: 8em;
-        left: 8.5%;
-        height: 40vh;
-        width: 35%;
-        margin: auto;
+      #position {
+        position: relative;
       }
 
       .greed{
         font-family: "Petrona", serif;
-        color: #ff0;
         position: absolute;
-        top: 35px;
-        left: 3.5em;
+        top: 75px;
         font-size: 8rem;
         animation: gradient 1.5s infinite alternate;
         font-variation-settings: 'wght' 700;
         text-align: center;
-        width: 50%;
-        height: 10%;
       }
 
       .greed1{
@@ -66,25 +58,25 @@
         }
         40% {
         font-variation-settings: 'wght' 900;    
-        top: 20px;
+        top: 50px;
         } 
         45% {
         font-variation-settings: 'wght' 900;    
-        top: 20px; 
+        top: 50px; 
         } 
         85% {
         font-variation-settings: 'wght' 200;    
-        top: 110px;   
+        top: 185px;   
         }
         100% {
         font-variation-settings: 'wght' 200;    
-        top: 110px;
+        top: 185px;
         }
       }
+
       .text {
-        position: absolute;
-        top: 60%;
-        left: 23.65%;
+        margin-left: auto;
+        margin-right: auto;
       }
     </style>
   </head>
@@ -105,14 +97,17 @@
       </nav>
     </header>
 
-    <section class="content-container">
-      <div class="greed greed1">GREED</div>
-      <div class="greed greed2">GREED</div>
-      <div class="greed greed3">GREED</div>
-      <div class="greed greed4">GREED</div>
-    </section>
-
     <main>
+      <div>
+        <section class="title-wrapper" id="position">
+          <div class="greed greed1">GREED</div>
+          <div class="greed greed2">GREED</div>
+          <div class="greed greed3">GREED</div>
+          <div class="greed greed4">GREED</div>
+        </section>
+      </div>
+
+
       <section class="text">
         <p>
           The sin of greed, characterized by an insatiable desire for wealth, power, and material possessions, is prevalent in various aspects of social media and the technology companies that own them. 

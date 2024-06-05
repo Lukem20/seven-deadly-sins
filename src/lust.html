@@ -4,14 +4,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Luke Moore">
+    <meta name="description" content="A web design project for CSUMB's experiemental typograhpy class. The sin, lust, as it is represented in social media & technology.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Lust</title>
 
-    <link rel="icon" type="image/x-icon" href="7ds-logo.PNG" />
+    <link rel="icon" type="image/png" href="7ds-logo.PNG" />
     <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/lust.css">
     <link rel="stylesheet" href="https://use.typekit.net/tvc5stt.css">
+  
+    <style>
+      .container {
+        width: 900px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        color: hsl(118 60% 50%);
+      }
+      .inner {
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+      }
+
+      #one, #two, #three {
+        position: absolute;
+        font-size: 4rem;
+        line-height: 1.2em;
+        text-align: center;
+        background: linear-gradient(to right, hsl(117 59% 52%), hsl(198 100% 45%));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text; 
+      }
+
+      p {
+        font-family: "ambroise-std", serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 10rem;
+      }
+
+      #one {
+        animation: scale 2000ms ease infinite;
+        opacity: 0.3;
+      }
+      @keyframes scale {
+        from {
+          animation-timing-function: ease-out;
+        }
+        to {
+          transform: scale(8);
+          opacity: 0;
+          animation-timing-function: ease-in-out;
+        }
+      }
+      #two {
+        animation: kern 5800ms ease infinite;
+      }
+      #three {
+        animation: kernOpacity 2000ms ease infinite;
+        opacity: 0.3;
+      }
+
+      @keyframes kern {
+        from {
+          animation-timing-function: ease-out;
+        }
+        to {
+          letter-spacing: 1.2em;
+          animation-timing-function: ease-in-out;
+        }
+      }
+
+      @keyframes kernOpacity {
+        from {
+          animation-timing-function: ease-out;
+        }
+        to {
+          opacity: 0;
+          letter-spacing: 1.8em;
+          animation-timing-function: ease-in-out;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -31,7 +110,7 @@
     </header>
     
     <main id="app">
-      <section class="lust-wrapper">
+      <section class="title-wrapper">
         <div class="container">
           <p class="inner">
             <span id="one">Lust</span>
@@ -41,7 +120,7 @@
         </div>
       </section>
 
-      <section class="text" id="top-space">
+      <section class="text">
           <p>
             The sin of lust, often associated with an insatiable desire for pleasure, gratification, or power, can be reflected in various aspects of social media and the technology companies that own them. 
             Firstly, social media platforms capitalize on users' desire for attention and validation through features like likes, comments, and follower counts, fostering a culture of seeking affirmation and approval from others. 
@@ -64,6 +143,5 @@
           </p>
       </section>
     </main>
-
   </body>
 </html>

@@ -28,7 +28,6 @@ h1 {
 	letter-spacing: 1.5rem;
 	cursor: default;
 }
-
 h2 {
 	font-family: "hypatia-sans-pro", sans-serif;
 	font-size: 2em;
@@ -58,7 +57,6 @@ body {
 		900px 900px,
 		900px 900px;
 	background-attachment: fixed;
-	
 	animation: bganimation 20s infinite;
 }
 

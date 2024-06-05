@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Luke Moore">
+    <meta name="description" content="A web design project for CSUMB's experiemental typograhpy class. The sin, gluttony, as it is represented in social media & technology.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Gluttony</title>
 
-    <link rel="icon" type="image/x-icon" href="7ds-logo.PNG" />
+    <link rel="icon" type="image/png" href="7ds-logo.PNG" />
     <link rel="stylesheet" type="text/css" href="styles/global.css">
     <link rel="stylesheet" type="text/css" href="https://use.typekit.net/tvc5stt.css">
 
@@ -24,15 +25,12 @@
         color: lightsalmon;
       }
 
-      .title-section {
-        height: 60vh;
-      }
       h1 {
         color: orange;
         font-family: "cheee-tbone", sans-serif;
-        font-weight: 400;
+        font-weight: 100;
         font-style: normal;
-        font-size: 10em;
+        font-size: 3em;
       }
     </style>
   </head>
@@ -54,8 +52,8 @@
     </header>
     
     <main id="app">
-      <section class="title-section">
-        <h1>Gluttony</h1>
+      <section class="title-wrapper">
+        <h1 id="gluttonyAnimate">Gluttony</h1>
       </section>
     
       <section class="text">
@@ -84,13 +82,12 @@
     <script type="module" defer>
       import gsap from 'gsap';
 
-      const gluttony = document.querySelector('h1');
-      gsap.from(gluttony, {
-          fontSize: 100,
-          fontWeight: 200,
-          duration: 6,
-          ease: "power3.in"
-        });
+      const gluttony = document.querySelector('#gluttonyAnimate');
+      gsap.to(gluttony, {
+        fontSize: 200,
+        duration: 5.5,
+        ease: "power3.in"
+      });
 
     </script>
   </body>
