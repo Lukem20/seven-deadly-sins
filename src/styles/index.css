@@ -5,6 +5,18 @@
 	justify-content: center;
 }
 
+nav.sidebar ul li a.light {
+	color: aliceblue;
+	transition: 0.2s ease;
+  }
+  nav.sidebar ul li a.light:visited {
+	color: aliceblue;
+  }
+  nav.sidebar ul li a.light:hover {
+	color: lightsalmon;
+	transition: 0.2s ease;
+  }
+
 h1 {
 	font-family: "mason-serif", sans-serif;
 	font-weight: 700;
