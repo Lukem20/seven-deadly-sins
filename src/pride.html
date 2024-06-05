@@ -18,11 +18,15 @@
         background-color: floralwhite;
       }
 
-      a {
+      nav.sidebar ul li a {
         color: rgb(13, 12, 12);
       }
-      a:visited {
+      nav.sidebar ul li a:visited {
         color:rgb(13, 12, 12);
+      }
+      nav.sidebar ul li a:hover {
+        color: rgb(236, 94, 38);
+        transition: 0.2s ease;
       }
 
       h1 {
@@ -30,21 +34,15 @@
         font-family: "lorimer-no-2", sans-serif;
         font-weight: 900;
         font-style: normal;
-
-        height: 400px;
+        height: 33.5vh;
         width: 100%;
       }
-
-      p {
-        font-weight: 500;
-      }
-      
     </style>
   </head>
 
   <body>
     <header>
-      <nav class="sidebar" role="navigation">
+      <nav class="sidebar">
         <ul>
           <li id="home-button"><a href="/index.html"><span aria-hidden="true" id="home-icon">T</span>Home</a></li>
           <li><a href="/envy.html">Envy</a></li>
@@ -63,8 +61,7 @@
         <h1>PR<span id="prideAnimate">i</span>DE</h1>
       </section>
     
-      <section class="center-text-wrapper">
-        <div data-container-style class="text">
+      <section class="text">
           <p>
             The sin of pride, characterized by excessive self-importance, arrogance, and a desire for admiration and recognition, is evident in various aspects of social media and the technology companies that own them. 
             Firstly, social media platforms foster an environment where individuals can curate and showcase idealized versions of themselves, leading to a culture of narcissism and self-promotion. 
@@ -86,7 +83,6 @@
             This elitism breeds pride as individuals strive to maintain an aura of exclusivity and superiority within their digital communities. 
             Moreover, certain features and functionalities of social media platforms, such as verification badges and exclusive clubs, contribute to the perception of hierarchy and reinforce feelings of pride among privileged users.
           </p>
-        </div>
       </section>
     </main> 
 
@@ -100,17 +96,16 @@
       })
 
       gsap.to(pride, {
-        fontSize: 480,
+        fontSize: 350,
         fontWeight: 900,
-        duration: 6,
+        duration: 5.1,
         ease: "power3.in"
       });
 
-      const h1Element = document.querySelector('h1');
-      gsap.to(h1Element, {
+      gsap.to(pride, {
         opacity: 0,
         duration: 0.5,
-        delay: 5.5,
+        delay: 4.5,
       });
       
     </script>

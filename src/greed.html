@@ -19,22 +19,24 @@
         background-color: beige;
       }
 
-      nav {
-        z-index: 5;
-      }
-      a {
+      nav.sidebar ul li a {
         color: rgb(13, 12, 12);
       }
-      a:visited {
+      nav.sidebar ul li a:visited {
         color:rgb(13, 12, 12);
       }
+      nav.sidebar ul li a:hover {
+        color: rgb(236, 94, 38);
+        transition: 0.2s ease;
+      }
 
-      .container {
+      .content-container {
         position: absolute;
-        top: 15em;
-        width: 100%;
-        height: 25%;
-        margin-top: -2em;
+        top: 8em;
+        left: 8.5%;
+        height: 40vh;
+        width: 35%;
+        margin: auto;
       }
 
       .greed{
@@ -73,50 +75,38 @@
         -webkit-text-stroke-width: 1px;
       }
 
-
       @keyframes gradient {
         0% {
         font-variation-settings: 'wght' 200;
         }
-
         40% {
         font-variation-settings: 'wght' 900;    
         top: 20px;
         } 
-
         45% {
         font-variation-settings: 'wght' 900;    
         top: 20px; 
         } 
-
         85% {
         font-variation-settings: 'wght' 200;    
         top: 110px;   
         }
-
         100% {
         font-variation-settings: 'wght' 200;    
         top: 110px;
         }
       }
-
-
       .text {
         position: absolute;
-        top: 78%;
-        left: 23.5%;
+        top: 60%;
+        left: 23.65%;
       }
-
-      p {
-        font-weight: 500;
-      }
-      
     </style>
   </head>
 
   <body>
     <header>
-      <nav class="sidebar" role="navigation">
+      <nav class="sidebar">
         <ul>
           <li id="home-button"><a href="/index.html"><span aria-hidden="true" id="home-icon">T</span>Home</a></li>
           <li><a href="/envy.html">Envy</a></li>
@@ -130,15 +120,15 @@
       </nav>
     </header>
 
-    <main>
-      <section class="container">
-        <div class="greed greed1">GREED</div>
-        <div class="greed greed2">GREED</div>
-        <div class="greed greed3">GREED</div>
-        <div class="greed greed4">GREED</div>
-      </section>
+    <section class="content-container">
+      <div class="greed greed1">GREED</div>
+      <div class="greed greed2">GREED</div>
+      <div class="greed greed3">GREED</div>
+      <div class="greed greed4">GREED</div>
+    </section>
 
-      <section data-container-style class="text">
+    <main>
+      <section class="text">
         <p>
           The sin of greed, characterized by an insatiable desire for wealth, power, and material possessions, is prevalent in various aspects of social media and the technology companies that own them. 
           Firstly, these companies often prioritize profit maximization above all else, employing monetization strategies that capitalize on user engagement and data collection. 

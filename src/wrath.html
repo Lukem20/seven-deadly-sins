@@ -18,38 +18,30 @@
         overflow-x: hidden;
       }
 
-      /* Page Navigation */
-      a {
-        color:aliceblue;
-      }
-      a:visited {
-        color:aliceblue;
-      }
-
       /* Body text */
       p {
         color: aliceblue;
       }
 
       /* Main Content */
-      main {
-        text-shadow: 10px 10px 4em red;
-      }
-
       h1 {
         font-family: "burnaby-stencil", sans-serif;
         font-size: 10em;
         font-weight: 400;
-        padding-top: 1em;
+        padding-top: 0.2em;
+      }
+      .shake-text {
+        text-shadow: 10px 10px 2em red;
       }
 
-      span {
+      #fire-effect {
         display: block;
-        background-image: url(/FireEffect.png);
+        background-image: url("../public/FireEffect.png");
         background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: fire 5s linear infinite;
         backface-visibility: hidden;
+        color: white;
       }
 
       @keyframes fire {
@@ -60,13 +52,12 @@
           background-position: 100% -50%;
         }
       }
-
     </style>
   </head>
 
   <body>
     <header>
-      <nav class="sidebar" role="navigation">
+      <nav class="sidebar">
         <ul>
           <li id="home-button"><a href="/index.html"><span aria-hidden="true" id="home-icon">T</span>Home</a></li>
           <li><a href="/envy.html">Envy</a></li>
@@ -80,12 +71,11 @@
       </nav>
     </header>
     
-    <main role="main" id="app">
+    <main id="app">
 
-      <h1 class="shake-text"><span>Wrath</span></h1>
+      <h1 class="shake-text"><span id="fire-effect">Wrath</span></h1>
 
-      <section class="center-text-wrapper">
-        <div data-container-style class="text">
+      <section class="text">
           <p>
             Social media platforms have played an important role in exacerbating polarization and its consequences, including democratic erosion and political violence. 
             Determining whether social media plays a role in worsening partisan animosity is important because political polarization has pernicious consequences. 
@@ -113,7 +103,6 @@
             The very polarization to which both social media platforms and political leaders have contributed will make it difficult to achieve progress in Washington. 
             But that’s not an excuse for inaction.
           </p>
-        </div>
       </section>
     </main>
 
@@ -122,7 +111,7 @@
       const shakeChars = document.querySelectorAll(".shake-text");
 
       // Generates a random offset from -3 to 3.
-      function getRandomOffset() {
+      const getRandomOffset = () => {
           const num = Math.max(Math.floor(Math.random() * 4), 1);
           return Math.random() < 0.5 ? -num : num;
       };

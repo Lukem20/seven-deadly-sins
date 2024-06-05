@@ -77,11 +77,6 @@ h1 {
 /*
   *** Body text ***
 */
-.center-text-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .text {
   column-count: 2;
   column-width: 15em;
@@ -89,6 +84,7 @@ h1 {
   orphans: 3;
   gap: 4em;
   width: min(100% - 3rem, var(--container-max, 100ch));
+  text-wrap: wrap;
   margin: 1em 0;
   text-align: left;
 }
@@ -99,4 +95,11 @@ h1 {
   font-size: 1.15em;
   letter-spacing: 0.03rem;
   line-height: 1.7em;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .text {
+    display: block;
+  }
 }
