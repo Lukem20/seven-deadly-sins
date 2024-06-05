@@ -1,14 +1,3 @@
-nav.sidebar ul li a {
-  color: rgb(13, 12, 12);
-}
-nav.sidebar ul li a:visited {
-  color:rgb(13, 12, 12);
-}
-nav.sidebar ul li a:hover {
-  color: lightsalmon;
-  transition: 0.2s ease;
-}
-
 .lust-wrapper {
   width: 100%;
   height: 100%;

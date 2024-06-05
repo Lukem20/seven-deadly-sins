@@ -30,11 +30,11 @@ nav.sidebar ul li {
 }
 nav.sidebar ul li a{
   text-decoration: none;
-  color: aliceblue;
+  color: rgb(13, 12, 12);
   transition: 0.2s ease;
 }
 nav.sidebar ul li a:visited {
-  color: aliceblue;
+  color: rgb(13, 12, 12);
 }
 nav.sidebar ul li a:hover {
   color: lightsalmon;
